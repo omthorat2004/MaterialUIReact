@@ -19,10 +19,11 @@ function App() {
       backgroundColor:theme.palette.primary.light
     }
   }))
-  
+
   return (
     <div>
      <Box>
+      hello
       <Stack direction="row" spacing={5} >
       <Sidebar/>
       <Feed/>
