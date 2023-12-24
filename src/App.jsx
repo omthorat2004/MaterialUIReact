@@ -23,7 +23,7 @@ function App() {
   return (
     <div>
      <Box>
-      hello
+      hellomessG
       <Stack direction="row" spacing={5} >
       <Sidebar/>
       <Feed/>
