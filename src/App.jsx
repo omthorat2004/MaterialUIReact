@@ -23,8 +23,8 @@ function App() {
   return (
     <div>
      <Box>
-      hellomessG
-      <Stack direction="row" spacing={5} >
+    
+      <Stack direction="row" spacing={5}  justifyContent="space-between">
       <Sidebar/>
       <Feed/>
       <Rightbar/>
