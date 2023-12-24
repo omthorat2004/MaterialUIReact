@@ -1,10 +1,10 @@
+import { Box } from '@mui/material';
 import React from 'react';
-
 const Sidebar = () => {
   return (
-    <div>
-       Feed
-    </div>
+    <Box bgcolor="skyblue">
+      Sidebar
+    </Box>
   );
 }
 

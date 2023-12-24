@@ -1,10 +1,10 @@
+import { Box } from '@mui/material';
 import React from 'react';
-
 const Rightbar = () => {
   return (
-    <div>
+    <Box bgcolor="lightcoral">
       Rightbar
-    </div>
+    </Box>
   );
 }
 
