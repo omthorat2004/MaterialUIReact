@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { Mail, Notifications, Pets } from '@mui/icons-material';
 import { AppBar, Avatar, Badge, Box, InputBase, Menu, MenuItem, Toolbar, Typography } from '@mui/material';
-import React from 'react';
+import React, { useState } from 'react';
 const StyledToolbar = styled(Toolbar)({
 
   display:"flex",
@@ -30,6 +30,7 @@ const UserBox = styled(Box)(({theme})=>({
    }
 }))
 const Navbar = () => {
+  const [open,setOpen] = useState(false)
   return (
     <AppBar position='sticky'>
         <StyledToolbar>
@@ -43,9 +44,9 @@ const Navbar = () => {
             <Badge badgeContent={2} color='error'>
               <Notifications/>
             </Badge>
-            <Avatar sx={{width:30,height:30}} src="https://wallpapers.com/images/hd/naruto-and-hinata-kissing-p2k5rfg6b0cw8m2c.webp"/>
+            <Avatar onClick={(e)=>setOpen(true)} sx={{width:30,height:30}} src="https://wallpapers.com/images/hd/naruto-and-hinata-kissing-p2k5rfg6b0cw8m2c.webp"/>
           </Icons>
-          <UserBox>
+          <UserBox >
           <Avatar sx={{width:30,height:30}} src="https://wallpapers.com/images/hd/naruto-and-hinata-kissing-p2k5rfg6b0cw8m2c.webp"/>
           <Typography variant='span'>John</Typography>
           </UserBox>
@@ -58,9 +59,10 @@ const Navbar = () => {
         }}
         anchorOrigin={{
           vertical:'top',
-          horizontal:'right'
+          horizontal:'right'// both are position
         }}
-        open={true}
+        open={open}
+        onClose={(e)=>setOpen(false)}
         transformOrigin={{
           vertical:'top',
           horizontal:'right'
