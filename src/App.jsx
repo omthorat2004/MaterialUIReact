@@ -3,6 +3,7 @@ import { Box, Button, Stack } from '@mui/material';
 import { useState } from 'react';
 import './App.css';
 import Feed from './Components/Feed';
+import Navbar from './Components/Navbar';
 import Rightbar from './Components/Rightbar';
 import Sidebar from './Components/Sidebar';
 function App() {
@@ -23,7 +24,7 @@ function App() {
   return (
     <div>
      <Box>
-    
+      <Navbar/>
       <Stack direction="row" spacing={5}  justifyContent="space-between">
       <Sidebar/>
       <Feed/>
